@@ -371,12 +371,12 @@ header{
             }
             button{
                 display: flex; justify-content: center; margin: 1.5rem auto 0;
-                align-items: center; background: rgb(255, 27, 27);
+                align-items: center; background: var(--main-color);
                 color: #Fff; font-size: 1rem; letter-spacing: .5px;
                 font-weight: bold; padding: .5rem 1rem .8rem;
-                width: 100%; border-radius: .2rem; opacity: .8;
+                width: 100%; border-radius: .2rem;
 
-                &:hover{ background: rgb(226, 27, 27); }
+                &:hover{ background: var(--hover); }
             }
         }
     }
