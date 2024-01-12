@@ -1,0 +1,124 @@
+
+*{
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+}
+.scroll{
+    --scroll-width: .45rem;
+    --scroll-color: var(--main-color);
+
+    overflow-y: auto; overflow-x: hidden;
+    scroll-behavior: smooth;
+    &::-webkit-scrollbar { width: var(--scroll-width); }
+    &::-webkit-scrollbar-track { background: none; }
+    &::-webkit-scrollbar-thumb { background: var(--scroll-color); border-radius: 1rem; }
+}
+:root {
+    --main-color: #ed7d41;
+    --hover: #fc955d;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    direction: rtl;
+    background: #f5f6f9;
+    @extend .scroll;
+}
+.material-symbols-outlined{
+    @font-face {
+        font-family: 'Material Symbols Outlined';
+        font-style: normal;
+        font-weight: 400;
+        src: url(https://fonts.gstatic.com/s/materialsymbolsoutlined/v148/kJF1BvYX7BgnkSrUwT8OhrdQw4oELdPIeeII9v6oDMzByHX9rA6RzaxHMPdY43zj-jCxv3fzvRNU22ZXGJpEpjC_1n-q_4MrImHCIJIZrDCvHOej.woff2) format('woff2');
+    }
+    font-family: 'Material Symbols Outlined';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    font-feature-settings: 'liga';
+    -webkit-font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    text-decoration: none;
+}
+.no-select, img, button, a, nav, footer{
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    text-decoration: none;
+}
+.layer{
+    position: relative;
+
+    &::after{
+        content: ''; background: none;
+        position: absolute; top: 0; left: 0;
+        width: 100%; height: 100%;
+    }
+}
+.loader{
+    --loader-background: #fff;
+    --loader-color: var(--main-color);
+    --loader-index: 2;
+
+    display: flex; justify-content: center;
+    align-items: center; position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    z-index: var(--loader-index);
+    background: var(--loader-background);
+    
+    &::after{
+        content: '';
+        border: .15rem solid rgba(0, 0, 0, .1);;
+        border-radius: 50%;
+        border-top: .15rem solid var(--loader-color);
+        width: 3.4rem; height: 3.4rem;
+        -webkit-animation: spin .5s linear infinite;
+        animation: spin .5s linear infinite;
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    }
+    &.filter{
+        background: rgba(0, 0, 0, .2);
+        backdrop-filter: blur(15px);
+    }
+}
+.hide{
+    display: none;
+}
+.pointer{
+    cursor: pointer;
+}
+.default{
+    cursor: default;
+}
+.over-hide{
+    overflow: hidden;
+}
+.relative{
+    position: relative;
+}
+.absolute{
+    position: absolute;
+}
+.fixed{
+    position: fixed;
+}
+.sticky{
+    position: sticky;
+    z-index: 99; top: 0;
+}
