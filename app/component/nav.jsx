@@ -55,40 +55,6 @@ export default function Navbar ({ single, register }) {
                         </div>
                     }
 
-                    <div className="hide flex justify-center items-center">
-
-                        <div className="cart-logo flex justify-center items-center">
-
-                            <p className="mt-[-1px] text-[#444] text-[15px]">السلة : <span>0</span> جنيه</p>
-
-                            <div onClick={_ => show_side('cart')} className="group cartCount relative h-[35px] w-[35px] border border-[#bfbfbfc2] mr-3 rounded-full flex justify-center hover:bg-black cursor-pointer">
-                                
-                                <span className="text-[11px] pb-[1px] absolute top-[-5px] text-sm left-[-5px] w-[17px] h-[17px] bg-[red] text-white text-center rounded-full flex justify-center items-center">
-                                    0
-                                </span>
-
-                                <svg className="transition-colors duration-300 group-hover:fill-white mt-[-1px] ml-[1px]" width="15" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M416 160h-72V120C344 53.83 290.2 0 224 0S104 53.83 104 120V160H32C14.33 160 0 174.3 0 192v240C0 476.2 35.82 
-                                    512 80 512h288c44.18 0 80-35.82 80-80V192C448 174.3 433.7 160 416 160zM152 120C152 80.3 184.3 48 224 48s72 32.3 72 
-                                    72V160h-144V120zM128 248C114.8 248 104 237.3 104 224S114.8 200 128 200S152 210.8 152 224S141.3 248 128 248zM320 
-                                    248c-13.25 0-24-10.75-24-24S306.8 200 320 200S344 210.8 344 224S333.3 248 320 248z"/>
-                                </svg>
-
-                            </div>
-
-                        </div>
-
-                        <Link href="/" className="mr-[1rem]">
-
-                            <svg className="bi bi-house-heart-fill fill-[--main-color] mt-[-3px]" height="35" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.707L8 2.207l6.646 6.646a.5.5 0 0 0 .708-.707L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.707 1.5Z" fillRule="evenodd"></path>
-                                <path d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6Zm0 5.189c1.664-1.673 5.825 1.254 0 5.018-5.825-3.764-1.664-6.691 0-5.018Z" fillRule="evenodd"></path>
-                            </svg>
-                            
-                        </Link>
-
-                    </div>
-
                     <div className="flex justify-center items-center">
 
                         {
